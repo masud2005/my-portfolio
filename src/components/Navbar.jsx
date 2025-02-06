@@ -103,23 +103,18 @@ const Navbar = () => {
 
             {/* Sections */}
             <div id="home" className="pt-32">
-                {/* <h1 className="text-4xl font-bold text-gray-300">Welcome to My Portfolio</h1> */}
                 <HeroSection />
             </div>
             <div id="about" className="">
-                {/* <h1 className="text-4xl font-bold text-gray-300">About Me</h1> */}
                 <AboutMeSection />
             </div>
             <div id="skills" className="">
-                {/* <h1 className="text-4xl font-bold text-gray-300">My Blog</h1> */}
                 <SkillsSection />
             </div>
             <div id="projects" className="">
-                {/* <h1 className="text-4xl font-bold text-gray-300">My Projects</h1> */}
                 <ProjectsSection />
             </div>
             <div id="contact" className="">
-                {/* <h1 className="text-4xl font-bold text-gray-300">Contact Me</h1> */}
                 <ContactSection />
             </div>
         </>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const skillsData = [
     {
@@ -81,35 +82,60 @@ const SkillsSection = () => {
     return (
         <section className="text-white py-16 -mt-10" id="skills">
             <div className="container mx-auto">
-                <h2 className="text-center text-4xl font-semibold mb-12">My Skills</h2>
+                <motion.h2
+                    className="text-center text-4xl font-semibold mb-12"
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: .5 }}
+                >My Skills</motion.h2>
 
                 {/* Skills & Tools in One Row */}
                 <div className="lg:flex flex-wrap md:flex-nowrap ">
                     {/* Skills Section */}
                     <div className="w-full lg:w-2/3 flex flex-wrap">
                         {skillsData.map((category, index) => (
-                            <div key={index} className="w-full md:w-1/2 px-4">
-                                <h3 className="text-2xl font-medium mb-4 text-blue-400">
+                            <div
+                                key={index} className="w-full md:w-1/2 px-4">
+                                <motion.h3
+                                    initial={{ x: -100, opacity: 0 }}
+                                    whileInView={{ x: 0, opacity: 1 }}
+                                    transition={{ duration: .5 }}
+                                    className="text-2xl font-medium mb-4 text-blue-400">
                                     {category.category}
-                                </h3>
-                                {category.skills.map((skill, idx) => (
-                                    <SkillBar key={idx} name={skill.name} level={skill.level} />
-                                ))}
+                                </motion.h3>
+                                <motion.div
+                                    initial={{ x: -100, y: 100, opacity: 0 }}
+                                    whileInView={{ x: 0, y: 0, opacity: 1 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    {category.skills.map((skill, idx) => (
+                                        <SkillBar key={idx} name={skill.name} level={skill.level} />
+                                    ))}
+                                </motion.div>
                             </div>
                         ))}
                     </div>
 
                     {/* Tools Section */}
                     <div className="w-full lg:w-1/3 px-4">
-                        <h3 className="text-2xl font-semibold text-blue-400 mb-6">Tools</h3>
-                        <div className="grid grid-cols-3 gap-4">
+                        <motion.h3
+                        initial={{ x: 100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="text-2xl font-semibold text-blue-400 mb-6">Tools</motion.h3>
+                        <motion.div
+                            initial={{ x: 100, y: 100, opacity: 0 }}
+                            whileInView={{ x: 0, y: 0, opacity: 1 }}
+                            transition={{ duration: 0.5 }}
+                            className="grid grid-cols-3 gap-4">
                             {toolsData.map((tool, index) => (
-                                <div key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col items-center shadow-lg hover:shadow-xl transition">
+                                <div
+                                    key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col items-center shadow-lg hover:shadow-xl transition">
                                     <img src={tool.logo} alt={tool.name} className="w-12 h-12 mb-2" />
                                     <span className="text-white text-sm font-medium">{tool.name}</span>
                                 </div>
                             ))}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

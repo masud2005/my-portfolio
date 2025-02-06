@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 import ProjectDetailsModal from './ProjectDetailsModal';
-    
+import { motion } from "framer-motion";
+
 // Sample project data
 const projectData = [
     {
@@ -109,13 +110,23 @@ const ProjectsSection = () => {
     return (
         <section className="py-16 -mt-10 text-white" id="projects">
             <div className="container mx-auto px-4">
-                <h2 className="text-center text-4xl font-semibold ">My Projects</h2>
-                <p className='text-center text-lg font-medium mb-12 pt-4'>Design & Development</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div
+                    initial={{ x: -100, y: -100, opacity: 0 }}
+                    whileInView={{x: 0, y: 0, opacity: 1 }}
+                    transition={{ duration: .5 }}
+                >
+                    <h2 className="text-center text-4xl font-semibold ">My Projects</h2>
+                    <p className='text-center text-lg font-medium mb-12 pt-4'>Design & Development</p>
+                </motion.div>
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projectData.map((project) => (
                         <ProjectCard key={project.id} project={project} onViewDetails={handleViewDetails} />
                     ))}
-                </div>
+                </motion.div>
 
                 {selectedProject &&
                     <ProjectDetailsModal project={selectedProject} onClose={handleCloseModal} />
