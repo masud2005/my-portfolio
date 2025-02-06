@@ -42,26 +42,28 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="h-[90px] place-content-center shadow-md text-white fixed top-0 left-0 right-0 z-30 border-b border-blue-500 backdrop-blur-md">
+            <nav className="h-[80px] place-content-center shadow-md text-white fixed top-0 left-0 right-0 z-30 border-b border-blue-500 backdrop-blur-md">
                 <div className="container mx-auto flex justify-between items-center py-4 px-2">
                     {/* Logo Section */}
                     <div className="flex items-center">
-                        <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-transparent bg-clip-text">
+                        {/* <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 text-transparent bg-clip-text">
+                            Masud Rana
+                        </h1> */}
+                        <h1 className="text-3xl font-bold bg-gradient-to-r from-teal-400  to-pink-500 text-transparent bg-clip-text">
                             Masud Rana
                         </h1>
                     </div>
 
                     {/* Desktop Navigation Links */}
                     <div className="hidden lg:flex items-center gap-6">
-                        {['home', 'about', 'skills', 'projects',  'contact'].map((item) => (
+                        {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                             <a
                                 key={item}
                                 onClick={() => handleScrollToSection(item)}
-                                className={`${
-                                    activeItem === item
-                                        ? 'text-lg border-b-2 border-teal-400 px-2 text-teal-400'
-                                        : 'text-lg hover:text-teal-400  px-2'
-                                }`}
+                                className={`${activeItem === item
+                                    ? 'text-lg border-b-2 border-teal-400 px-2 text-teal-400'
+                                    : 'text-lg hover:text-teal-400  px-2'
+                                    }`}
                             >
                                 {item.charAt(0).toUpperCase() + item.slice(1)}
                             </a>
@@ -79,20 +81,18 @@ const Navbar = () => {
 
                 {/* Mobile Navigation Menu */}
                 <div
-                    className={`${
-                        menuOpen ? 'left-0' : '-left-full'
-                    } absolute duration-500 w-full bg-gray-800 shadow-md z-50`}
+                    className={`${menuOpen ? 'left-0' : '-left-full'
+                        } absolute duration-500 w-full bg-gray-800 shadow-md z-50`}
                 >
                     <div className="flex flex-col gap-4 py-4 px-4">
                         {['home', 'about', 'projects', 'blog', 'contact'].map((item) => (
                             <a
                                 key={item}
                                 onClick={() => handleScrollToSection(item)}
-                                className={`${
-                                    activeItem === item
-                                        ? 'block text-lg font-semibold border-b-2 border-teal-500 text-teal-400'
-                                        : 'block text-base hover:text-teal-400 pt-2'
-                                }`}
+                                className={`${activeItem === item
+                                    ? 'block text-lg font-semibold border-b-2 border-teal-500 text-teal-400'
+                                    : 'block text-base hover:text-teal-400 pt-2'
+                                    }`}
                             >
                                 {item.charAt(0).toUpperCase() + item.slice(1)}
                             </a>

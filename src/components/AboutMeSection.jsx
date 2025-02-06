@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaBriefcase, FaCode, FaProjectDiagram } from 'react-icons/fa';
 import myPhoto from '../assets/my-profile.jpeg'
+import masud from '../assets/Masud.jpg'
 
 const AboutMeSection = () => {
     return (
@@ -16,9 +17,13 @@ const AboutMeSection = () => {
                     {/* Left Content (Image) */}
                     <div className="w-full lg:w-1/3 mb-8 lg:mb-0 flex justify-center">
                         <img 
-                            src={myPhoto} 
+                            // src={myPhoto} 
+                            // src="https://i.ibb.co.com/1tWJDkB3/1736586255110.jpg"
+                            // src="https://i.ibb.co.com/MxnZ9hPQ/1736586731255.jpg"
+                            // src="https://i.ibb.co.com/fGQrz39V/1736586255110-removebg-preview.png"
+                            src={masud}
                             alt="Profile" 
-                            className="w-[80%] sm:w-[60%] md:w-[50%] md:h-[400px] lg:w-full 2xl:h-[600px] rounded-lg shadow-lg"
+                            className="w-[80%] sm:w-[60%] md:w-[50%] md:h-[400px] lg:w-full xl:h-[450px] 2xl:h-[550px] rounded-lg shadow-lg"
                         />
                     </div>
 
@@ -41,7 +46,7 @@ const AboutMeSection = () => {
                             <div className="bg-[#041c50] hover:bg-transparent border-transparent hover:border hover:border-blue-700 p-4 rounded-lg text-center transition">
                                 <FaProjectDiagram className="text-3xl mx-auto mb-2" />
                                 <h4 className="font-semibold">Projects</h4>
-                                <p>40+ Projects Completed</p>
+                                <p>45+ Projects Completed</p>
                             </div>
                         </div>
                         <p className="mt-6">
