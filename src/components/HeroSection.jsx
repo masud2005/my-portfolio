@@ -18,37 +18,33 @@ const HeroSection = () => {
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-2 gap-5 mt-10 lg:mt-0">
                 {/* Left Content */}
                 <div className="flex flex-col items-start lg:items-start mb-6 lg:mb-0">
-                    <div
-
-                    >
-                        <motion.h2
-                            initial={{ x: -70, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: .5 }}
-                            className="text-3xl lg:text-4xl font-medium text-gray-300">Hello, I am</motion.h2>
-                        <motion.h1
-                            initial={{ x: -70, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: .5 }}
-                            className="text-5xl md:text-6xl lg:text-7xl font-bold mt-2 text-white">
-                            Masud Rana
-                        </motion.h1>
-                        <motion.h2
-                            initial={{ x: -70, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ duration: .5 }}
-                            className="text-2xl md:text-3xl font-medium bg-gradient-to-r from-teal-400  to-pink-500 text-transparent bg-clip-text mt-2">
-                            <Typewriter
-                                words={['Frontend Developer', 'React.js & JavaScript Specialist']}
-                                loop={true}
-                                cursor
-                                cursorStyle="|"
-                                typeSpeed={100}
-                                deleteSpeed={100}
-                                delaySpeed={1000}
-                            />
-                        </motion.h2>
-                    </div>
+                    <motion.h2
+                        initial={{ x: -70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: .5 }}
+                        className="text-3xl lg:text-4xl font-medium text-gray-300">Hello, I am</motion.h2>
+                    <motion.h1
+                        initial={{ x: -70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: .5 }}
+                        className="text-5xl md:text-6xl lg:text-7xl font-bold mt-2 text-white">
+                        Masud Rana
+                    </motion.h1>
+                    <motion.h2
+                        initial={{ x: -70, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ duration: .5 }}
+                        className="text-2xl md:text-3xl font-medium bg-gradient-to-r from-teal-400  to-pink-500 text-transparent bg-clip-text mt-2">
+                        <Typewriter
+                            words={['Frontend Developer', 'React.js & JavaScript Specialist']}
+                            loop={true}
+                            cursor
+                            cursorStyle="|"
+                            typeSpeed={100}
+                            deleteSpeed={100}
+                            delaySpeed={1000}
+                        />
+                    </motion.h2>
                     <motion.i
                         initial={{ y: 100, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
