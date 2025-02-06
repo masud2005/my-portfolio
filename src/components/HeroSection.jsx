@@ -12,7 +12,6 @@ const HeroSection = () => {
     return (
         <section
             id="home"
-            // className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white"
             className=" text-white"
         >
             <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-2 gap-5 mt-10 lg:mt-0">
@@ -22,22 +21,7 @@ const HeroSection = () => {
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mt-2 text-white">
                         <span>Masud Rana
                         </span>
-                        {/* <span>
-                            <Typewriter
-                                words={['Masud Rana']}
-                                loop={true}
-                                cursor
-                                cursorStyle="|"
-                                typeSpeed={100}
-                                deleteSpeed={100}
-                                delaySpeed={1000}
-                            />
-                        </span> */}
                     </h1>
-                    {/* <h2 className="text-2xl font-medium text-gray-300 mt-2">
-                        
-                        Frontend Developer | React.js & JavaScript Specialist
-                    </h2> */}
                     <h2 className="text-3xl font-medium bg-gradient-to-r from-teal-400  to-pink-500 text-transparent bg-clip-text mt-2">
                         <Typewriter
                             words={['Frontend Developer', 'React.js & JavaScript Specialist']}
@@ -101,16 +85,6 @@ const HeroSection = () => {
                 </div>
 
                 {/* Right Content (Profile Image) */}
-                {/* <div className="flex justify-center items-center">
-                    <img
-                        // src="https://i.ibb.co.com/1tWJDkB3/1736586255110.jpg" // Replace with your professional image URL
-                        // src='https://i.ibb.co.com/CsQbyD2M/Mern-removebg-preview.png'
-                        src={MERN1}
-                        // src={profile}
-                        alt="Profile"
-                        className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] xl:w-[550px]  xl:h-[550px] border-2 border-blue-500 shadow-lg rounded-lg"
-                    />
-                </div> */}
                 <div className="flex justify-center items-center">
                     <img
                         // src="https://i.ibb.co.com/1tWJDkB3/1736586255110.jpg" // Replace with your professional image URL
