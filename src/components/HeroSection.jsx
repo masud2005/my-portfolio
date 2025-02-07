@@ -15,9 +15,9 @@ const HeroSection = () => {
             id="home"
             className=" text-white"
         >
-            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-2 gap-5 mt-10 lg:mt-0">
+            <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-2 gap-5 mt-10 lg:mt-0 overflow-hidden">
                 {/* Left Content */}
-                <div className="flex flex-col items-start lg:items-start mb-6 lg:mb-0">
+                <div className="flex flex-col items-start lg:items-start mb-6 lg:mb-0 ">
                     <motion.h2
                         initial={{ x: -70, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}

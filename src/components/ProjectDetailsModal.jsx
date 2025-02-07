@@ -1,8 +1,8 @@
 const ProjectDetailsModal = ({ project, onClose }) => {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-40 overflow-hidden px-5 md:px-20">
-            <div className="relative bg-gradient-to-r from-[#040b22] to-[#011947] p-6 rounded-lg max-w-[1280px] mx-auto text-white shadow-xl max-h-[90vh] overflow-y-auto border border-blue-500">
-                
+            <div className="relative bg-gradient-to-r from-[#040b22] to-[#011947] p-3 md:p-6 rounded-lg max-w-[1280px] mx-auto text-white shadow-xl max-h-[90vh] overflow-y-auto border border-blue-500">
+
                 {/* Close Icon */}
                 <button
                     onClick={onClose}
@@ -27,7 +27,7 @@ const ProjectDetailsModal = ({ project, onClose }) => {
 
                 {/* Project Description */}
                 <div className="mb-4">
-                    <p className="text-lg">{project.description}</p>
+                    <p className="">{project.description}</p>
                 </div>
 
                 {/* Technologies Used Section */}
@@ -37,22 +37,33 @@ const ProjectDetailsModal = ({ project, onClose }) => {
                         <div className="font-semibold text-lg">Frontend:</div>
                         <ul className="list-disc pl-5">
                             {project.technologiesUsed.frontend.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
+                                <li key={index} className="">{tech}</li>
                             ))}
                         </ul>
                         <div className="font-semibold text-lg mt-4">Backend:</div>
                         <ul className="list-disc pl-5">
                             {project.technologiesUsed.backend.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
+                                <li key={index} className="">{tech}</li>
                             ))}
                         </ul>
                         <div className="font-semibold text-lg mt-4">Firebase:</div>
                         <ul className="list-disc pl-5">
                             {project.technologiesUsed.firebase.map((tech, index) => (
-                                <li key={index} className="text-lg">{tech}</li>
+                                <li key={index} className="">{tech}</li>
                             ))}
                         </ul>
                     </div>
+                </div>
+
+                {/* Project Description */}
+                <div className="mb-4 mt-4">
+                    <span className="text-lg block pb-1">Challenges Faced: </span>
+                    <span className="">{project.challengesFaced}</span>
+                </div>
+
+                <div>
+                    <span className="text-lg block pb-1">Future Plans: </span>
+                    <span className="">{project.futurePlans}</span>
                 </div>
 
                 {/* Buttons Section */}

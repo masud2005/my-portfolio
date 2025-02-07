@@ -82,10 +82,10 @@ const Navbar = () => {
                 {/* Mobile Navigation Menu */}
                 <div
                     className={`${menuOpen ? 'left-0' : '-left-full'
-                        } absolute duration-500 w-full bg-gray-800 shadow-md z-50`}
+                        } absolute duration-500 w-full bg-[#041c50] shadow-md z-50`}
                 >
                     <div className="flex flex-col gap-4 py-4 px-4">
-                        {['home', 'about', 'projects', 'blog', 'contact'].map((item) => (
+                        {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                             <a
                                 key={item}
                                 onClick={() => handleScrollToSection(item)}

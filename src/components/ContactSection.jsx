@@ -28,8 +28,8 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="container mx-auto text-white py-16 -mt-10">
-      <div className=" mx-auto px-4">
+    <section className="container mx-auto text-white py-16 -mt-10 overflow-hidden">
+      <div className=" mx-auto px-4 ">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -40,7 +40,7 @@ const ContactSection = () => {
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side */}
-          <div className="space-y-6">
+          <div className="space-y-6 overflow-hidden">
             {/* Email */}
             <motion.div
               initial={{ x: -100, y: 50, opacity: 0 }}
@@ -131,8 +131,8 @@ const ContactSection = () => {
           <div>
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <motion.input
-                initial={{ x: 100, y: 50, opacity: 0 }}
-                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                initial={{  y: 50, opacity: 0 }}
+                whileInView={{  y: 0, opacity: 1 }}
                 transition={{ duration: .5 }}
                 type="text"
                 name="from_name"
@@ -141,8 +141,8 @@ const ContactSection = () => {
                 required
               />
               <motion.input
-                initial={{ x: 100, y: 50, opacity: 0 }}
-                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                initial={{  y: 100, opacity: 0 }}
+                whileInView={{  y: 0, opacity: 1 }}
                 transition={{ duration: .5 }}
                 type="email"
                 name="reply_to"
@@ -151,8 +151,8 @@ const ContactSection = () => {
                 required
               />
               <motion.textarea
-                initial={{ x: 100, y: 50, opacity: 0 }}
-                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                initial={{  y: 100, opacity: 0 }}
+                whileInView={{  y: 0, opacity: 1 }}
                 transition={{ duration: .5 }}
                 name="message"
                 placeholder="Your Message Here..."
@@ -161,8 +161,8 @@ const ContactSection = () => {
                 required
               ></motion.textarea>
               <motion.button
-                initial={{ x: 100, y: 50, opacity: 0 }}
-                whileInView={{ x: 0, y: 0, opacity: 1 }}
+                initial={{  y: 100, opacity: 0 }}
+                whileInView={{  y: 0, opacity: 1 }}
                 transition={{ duration: .5 }}
                 type="submit"
                 className="w-full py-3 bg-transparent border border-blue-500 hover:bg-[#041c50] rounded-lg text-white font-semibold"

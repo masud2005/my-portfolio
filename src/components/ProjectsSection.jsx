@@ -32,7 +32,9 @@ const projectData = [
             firebase: [
                 'Authentication with Email/password and Google-based authentication.'
             ]
-        }
+        },
+        challengesFaced: 'Implementing real-time updates for query recommendations and handling complex state management.',
+        futurePlans: 'Adding AI-based query recommendations and improving user engagement with notifications.'
     },
     {
         id: 2,
@@ -61,7 +63,9 @@ const projectData = [
             firebase: [
                 'Authentication with Email/password and Google-based authentication.'
             ]
-        }
+        },
+        challengesFaced: 'Ensuring data consistency between employers and job seekers, and optimizing performance for large datasets.',
+        futurePlans: 'Integrating AI-based job recommendations and enhancing resume parsing functionality.'
     },
     {
         id: 3,
@@ -91,8 +95,11 @@ const projectData = [
             firebase: [
                 'Authentication with Email/password and Google-based authentication.'
             ]
-        }
+        },
+        challengesFaced: 'Managing inventory efficiently and implementing role-based access control.',
+        futurePlans: 'Adding an automated stock tracking system and integrating payment options for equipment purchases.'
     }
+    
 ];
 
 
@@ -109,10 +116,10 @@ const ProjectsSection = () => {
 
     return (
         <section className="py-16 -mt-10 text-white" id="projects">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 overflow-hidden">
                 <motion.div
-                    initial={{ x: -100, y: -100, opacity: 0 }}
-                    whileInView={{x: 0, y: 0, opacity: 1 }}
+                    initial={{ y: 100, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: .5 }}
                 >
                     <h2 className="text-center text-4xl font-semibold ">My Projects</h2>

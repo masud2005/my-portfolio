@@ -90,7 +90,7 @@ const SkillsSection = () => {
                 >My Skills</motion.h2>
 
                 {/* Skills & Tools in One Row */}
-                <div className="lg:flex flex-wrap md:flex-nowrap ">
+                <div className="lg:flex flex-wrap md:flex-nowrap overflow-hidden">
                     {/* Skills Section */}
                     <div className="w-full lg:w-2/3 flex flex-wrap">
                         {skillsData.map((category, index) => (
@@ -130,7 +130,7 @@ const SkillsSection = () => {
                             className="grid grid-cols-3 gap-4">
                             {toolsData.map((tool, index) => (
                                 <div
-                                    key={index} className="bg-gray-800 p-4 rounded-lg flex flex-col items-center shadow-lg hover:shadow-xl transition">
+                                    key={index} className="bg-[#041c50] hover:bg-transparent transition duration-300 border border-transparent hover:border-blue-500 p-4 rounded-lg flex flex-col items-center shadow-lg hover:shadow-xl transition">
                                     <img src={tool.logo} alt={tool.name} className="w-12 h-12 mb-2" />
                                     <span className="text-white text-sm font-medium">{tool.name}</span>
                                 </div>

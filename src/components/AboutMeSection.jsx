@@ -19,7 +19,7 @@ const AboutMeSection = () => {
                     <h3 className="text-2xl mt-2">About Me</h3>
                 </motion.div>
 
-                <div className="flex flex-col lg:flex-row lg:items-center">
+                <div className="flex flex-col lg:flex-row lg:items-center overflow-hidden">
                     {/* Left Content (Image) */}
                     <motion.div
                         className="w-full lg:w-1/3 mb-8 lg:mb-0 flex justify-center"
@@ -42,8 +42,8 @@ const AboutMeSection = () => {
                     <div className="w-full lg:w-2/3 lg:pl-12">
                         <motion.div
                             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
-                            initial={{ x: 100, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: .5 }}
                         >
                             {/* Experience Card */}
